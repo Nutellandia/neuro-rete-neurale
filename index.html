@@ -1,42 +1,121 @@
 <!DOCTYPE html>
 <html lang="it">
+  <!-- 
+    Neuro-Genesis: Digital Life Simulation
+    Architect & Lead Developer: Emilio Frascogna
+    Original Source Code - All Rights Reserved
+  -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="author" content="Emilio Frascogna" />
+    <meta name="copyright" content="Emilio Frascogna" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Neuro" />
     <title>Neuro-Genesis</title>
+    
+    <!-- PWA Manifest & Icons -->
     <link rel="manifest" href="./manifest.json" />
     <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body { background-color: #0f172a; color: #e2e8f0; touch-action: none; overscroll-behavior: none; }
-      ::-webkit-scrollbar { width: 8px; height: 8px; }
-      ::-webkit-scrollbar-track { background: #1e293b; }
-      ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
-    </style>
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://aistudiocdn.com/react@^19.2.0",
-        "react/": "https://aistudiocdn.com/react@^19.2.0/",
-        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-        "vite": "https://aistudiocdn.com/vite@^7.2.6",
-        "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/",
-        "d3": "https://aistudiocdn.com/d3@^7.9.0",
-        "jszip": "https://aistudiocdn.com/jszip@^3.10.1",
-        "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
-        "@mlc-ai/web-llm": "https://aistudiocdn.com/@mlc-ai/web-llm@^0.2.80"
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bio: {
+                dark: '#0f172a',
+                panel: '#1e293b',
+                accent: '#38bdf8',
+                danger: '#f43f5e',
+                success: '#10b981',
+                warning: '#f59e0b'
+              }
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            }
+          }
+        }
       }
-    }
     </script>
-  </head>
+    <style>
+      /* GLOBAL RESET FOR TOUCH/SELECTION BEHAVIOR */
+      * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none; /* Disables the callout menu (copy/paste) on iOS */
+        -webkit-user-select: none;   /* Disables text selection on iOS */
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;           /* Standard syntax */
+      }
+
+      /* Re-enable selection for inputs so typing works */
+      input, textarea {
+        -webkit-user-select: text;
+        user-select: text;
+      }
+
+      body {
+        background-color: #0f172a;
+        color: #e2e8f0;
+        overscroll-behavior: none; /* Prevent pull-to-refresh */
+        touch-action: none; /* Prevent default touch actions generally */
+      }
+
+      /* Custom scrollbar for terminal feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; 
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.6",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/",
+    "d3": "https://aistudiocdn.com/d3@^7.9.0",
+    "jszip": "https://aistudiocdn.com/jszip@^3.10.1",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "@mlc-ai/web-llm": "https://aistudiocdn.com/@mlc-ai/web-llm@^0.2.80"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
   <body>
     <div id="root"></div>
+    <!-- Hidden Watermark -->
+    <div style="display:none; visibility:hidden;" id="signature-ef">Emilio Frascogna Architecture</div>
+    
+    <!-- Entry Point Locale per Vite/Vercel -->
     <script type="module" src="/index.tsx"></script>
+
+    <!-- PWA Service Worker Registration -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+          navigator.serviceWorker.register('./service-worker.js')
+            .then((reg) => console.log('Neuro-Genesis Service Worker Registered.', reg))
+            .catch((err) => console.log('Service Worker Registration Failed:', err));
         });
       }
     </script>
