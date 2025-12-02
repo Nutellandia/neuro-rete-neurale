@@ -1,12 +1,12 @@
 {
-  "stage": "Progenitore Neurale (Neuroblasto)",
+  "stage": "Ganglio Basale (Riflessi)",
   "ascensionLevel": 0,
-  "energy": 66.95000000000074,
-  "maxEnergy": 158,
+  "energy": 142.14999999999324,
+  "maxEnergy": 231,
   "metabolicRate": -0.05,
-  "genesisTimestamp": 1764659387375,
+  "genesisTimestamp": 1764660759667,
   "neurotransmitters": {
-    "dopamine": 36.95000000000074,
+    "dopamine": 0,
     "serotonin": 80,
     "adrenaline": 0,
     "acetylcholine": 10,
@@ -15,10 +15,10 @@
   "memories": [],
   "shortTermBuffer": [],
   "phonemeMemory": {},
-  "neuronCount": 885,
+  "neuronCount": 8105,
   "synapseStrength": 0.1,
-  "ageTicks": 261,
-  "lastThought": "[SYS: OMEOS_CHECK_OK]",
+  "ageTicks": 1188,
+  "lastThought": "[BG: SCANNING_INPUTS]",
   "isSleeping": false,
   "vocabulary": [],
   "learnedReflexes": {},
@@ -45,12 +45,12 @@
     }
   },
   "handPosition": {
-    "x": 50,
-    "y": 50
+    "x": 60.314832245046354,
+    "y": 48.90979772690365
   },
   "handVelocity": {
-    "vx": 0,
-    "vy": 0
+    "vx": -0.34382772656011507,
+    "vy": 0.03633996036617482
   },
   "targetStroke": [],
   "neuroPlasticity": {
@@ -68,7 +68,7 @@
   "detectedPeripherals": [],
   "computeMode": "LOCAL",
   "proceduralConfig": {
-    "seed": 1764659387375,
+    "seed": 1764660759667,
     "densityMap": {
       "0": 0.5,
       "1": 0.8

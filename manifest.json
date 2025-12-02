@@ -1,1 +1,23 @@
-{ "name": "Neuro-Genesis", "short_name": "Neuro", "start_url": ".", "display": "standalone", "background_color": "#0f172a", "theme_color": "#0f172a", "icons": [ { "src": "icon.svg", "sizes": "512x512", "type": "image/svg+xml" } ] }
+{
+  "name": "Neuro-Genesis",
+  "short_name": "Neuro",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "description": "Biological Digital Neural Network Simulation",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "./icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

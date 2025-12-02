@@ -1,33 +1,50 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import JSZip from 'jszip';
-import NeuronVisualizer from './NeuronVisualizer';
-import NeuroControls from './NeuroControls';
-import OcularSystem from './OcularSystem';
-import AudioSystem from './AudioSystem';
-import MotionSystem from './MotionSystem';
-import VocalTract from './VocalTract';
-import CreativeCanvas from './CreativeCanvas';
-import MediaLearningStation from './MediaLearningStation';
-import WebInterface from './WebInterface';
-import MetabolismMonitor from './MetabolismMonitor';
-import TypewriterSystem from './TypewriterSystem';
-import { BrainState, LifeStage, Neurotransmitters, SensoryInputData, RealtimeSensoryData, VocalParams, DrawingAction, SimulationLog, DeviceInfo, OutputCapabilities } from './types';
-import { getFreshBrainState, loadBrainState, saveBrainState, clearBrainData, sanitizeState, saveBrainStateSync } from './persistence';
-import { processBrainReaction, analyzeGrowth, getEvolutionProgress } from './cognitiveEngine';
-import { localLlmNode, LlmStatus } from './localLlmNode'; 
-import { exportProjectToZip } from './sourceExporter'; 
 
-const App: React.FC = () => {
-  const [brain, setBrain] = useState<BrainState>(getFreshBrainState());
-  const [logs, setLogs] = useState<any[]>([]);
-  // Placeholder App logic for mobile build
-  return (
-    <div className="bg-black h-screen text-white flex flex-col items-center justify-center p-4 text-center">
-      <h1 className="text-2xl font-bold text-cyan-400 mb-4">NEURO-GENESIS MOBILE BUILD</h1>
-      <p className="mb-4">System recovered from flat structure.</p>
-      <NeuronVisualizer neuronCount={100} stage={LifeStage.PROGENITORE} />
-      <button onClick={() => exportProjectToZip(brain, logs)} className="mt-4 border px-4 py-2 rounded">RE-EXPORT</button>
-    </div>
-  );
+import React, { useState, useEffect, useRef } from 'react';
+import NeuronVisualizer from './components/NeuronVisualizer';
+import NeuroControls from './components/NeuroControls';
+import OcularSystem from './components/OcularSystem';
+import AudioSystem from './components/AudioSystem';
+import MotionSystem from './components/MotionSystem';
+import VocalTract from './components/VocalTract';
+import CreativeCanvas from './components/CreativeCanvas';
+import MediaLearningStation from './components/MediaLearningStation';
+import WebInterface from './components/WebInterface';
+import MetabolismMonitor from './components/MetabolismMonitor';
+import TypewriterSystem from './components/TypewriterSystem';
+import { BrainState, LifeStage, ComputeMode } from './types';
+import { getFreshBrainState, loadBrainState, saveBrainState } from './services/persistence';
+import { processBrainReaction, analyzeGrowth, getEvolutionProgress } from './services/cognitiveEngine';
+
+// SYSTEM RESTORED
+const App = () => {
+    const [brain, setBrain] = useState(getFreshBrainState());
+    // Basic initialization to ensure visualizer works
+    return (
+        <div className="bg-black w-full h-screen text-white flex flex-col font-mono">
+            <div className="p-2 border-b border-gray-800 bg-gray-900 flex justify-between">
+                <span className="text-cyan-400 font-bold">NEURO-GENESIS SYSTEM</span>
+                <span className="text-xs text-green-500">ONLINE</span>
+            </div>
+            <div className="flex-1 relative">
+                <NeuronVisualizer 
+                   neuronCount={brain.neuronCount}
+                   stage={brain.stage}
+                   activityLevel={1}
+                   isVisible={true}
+                   realtimeData={{current: {vision:{intensity:0}, audio:{volume:0, frequencies:new Uint8Array(32)}, motor:{x:0,y:0,isDrawing:false}}}}
+                   viewMode="CORE"
+                   physicsCap={500}
+                   ageString="0h"
+                   totalTicks={brain.ageTicks}
+                   neuroPlasticity={brain.neuroPlasticity}
+                   outputCapabilities={brain.outputCapabilities}
+                   energy={brain.energy}
+                   maxEnergy={brain.maxEnergy}
+                   isSleeping={brain.isSleeping}
+                   evoProgress={getEvolutionProgress(brain)}
+                />
+            </div>
+        </div>
+    );
 };
 export default App;
