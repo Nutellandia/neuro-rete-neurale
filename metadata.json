@@ -1,0 +1,8 @@
+{
+  "name": "Neuro-Genesis",
+  "description": "A biological simulation of a growing digital neural network, starting from a single cell. Features neurotransmitter management, sensory input processing, and evolutionary learning phases.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
