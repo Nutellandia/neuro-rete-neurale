@@ -1,1 +1,3 @@
-import React from 'react'; export default function CreativeCanvas() { return <div className="bg-gray-900 h-32 border border-gray-700 mt-2">CANVAS</div>; }
+import React from 'react';
+const CreativeCanvas: React.FC<any> = () => <div className="bg-black text-blue-500 border border-blue-900 p-2">CREATIVE CANVAS</div>;
+export default CreativeCanvas;

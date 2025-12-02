@@ -1,1 +1,3 @@
-import React from 'react'; export default function WebInterface() { return <div className="bg-gray-900 p-2 border border-gray-700 mt-2">WEB INTERFACE</div>; }
+import React from 'react';
+const WebInterface: React.FC<any> = () => <div className="bg-black text-cyan-500 border border-cyan-900 p-2">WEB INTERFACE</div>;
+export default WebInterface;

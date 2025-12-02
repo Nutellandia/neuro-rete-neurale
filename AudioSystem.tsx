@@ -1,2 +1,3 @@
 import React from 'react';
-export default function AudioSystem() { return <div className="bg-gray-900 p-2 border border-gray-700 text-xs mt-2">AUDIO SENSORS ACTIVE</div>; }
+const AudioSystem: React.FC<any> = () => <div className="bg-black text-yellow-500 border border-yellow-900 p-2">AUDIO SYSTEM</div>;
+export default AudioSystem;

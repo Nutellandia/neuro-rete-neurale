@@ -1,2 +1,3 @@
 import React from 'react';
-export default function MotionSystem() { return <div className="bg-gray-900 p-2 border border-gray-700 text-xs mt-2">VESTIBULAR SYSTEM ACTIVE</div>; }
+const MotionSystem: React.FC<any> = () => <div className="bg-black text-orange-500 border border-orange-900 p-2">MOTION SYSTEM</div>;
+export default MotionSystem;

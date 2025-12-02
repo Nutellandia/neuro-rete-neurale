@@ -2,30 +2,30 @@ export const PROJECT_ARCHITECT = "Emilio Frascogna";
 export const COPYRIGHT_YEAR = "2024";
 
 export enum LifeStage {
-  PROGENITORE = 'Progenitore Neurale (Neuroblasto)',
-  GANGLIO = 'Ganglio Basale (Riflessi)',
-  SISTEMA_LIMBICO = 'Sistema Limbico (Emotivo)',
-  NEOCORTECCIA = 'Neocorteccia Primitiva (Verbal)',
-  CORTECCIA_ASSOCIATIVA = 'Corteccia Associativa',
-  CERVELLO_MATURO = 'Encefalo Maturo (Senziente)',
-  POST_UMANO = 'Architettura Post-Biologica'
+  PROGENITORE = 'Progenitore Neurale (Neuroblasto)', 
+  GANGLIO = 'Ganglio Basale (Riflessi)',             
+  SISTEMA_LIMBICO = 'Sistema Limbico (Emotivo)',     
+  NEOCORTECCIA = 'Neocorteccia Primitiva (Verbal)',  
+  CORTECCIA_ASSOCIATIVA = 'Corteccia Associativa',   
+  CERVELLO_MATURO = 'Encefalo Maturo (Senziente)',   
+  POST_UMANO = 'Architettura Post-Biologica'         
 }
 
 export interface Neurotransmitters {
-  dopamine: number;
-  serotonin: number;
-  adrenaline: number;
-  acetylcholine: number;
-  cortisol: number;
+  dopamine: number;      
+  serotonin: number;     
+  adrenaline: number;    
+  acetylcholine: number; 
+  cortisol: number;      
 }
 
 export interface Memory {
   id: string;
   timestamp: number;
   type: 'VISUAL' | 'AUDITORY' | 'CONCEPTUAL' | 'SYSTEM' | 'PHYSICAL' | 'SELF_OUTPUT' | 'WEB_KNOWLEDGE' | 'ASSOCIATION' | 'VOCAL_MASTERY' | 'MEDIA_PATTERN';
-  content: string;
-  emotionalWeight: number;
-  decay: number;
+  content: string;       
+  emotionalWeight: number; 
+  decay: number;         
 }
 
 export interface SensoryBufferItem {
@@ -37,12 +37,12 @@ export interface SensoryBufferItem {
 
 export interface SensoryInputData {
   type: 'vision' | 'text' | 'audio' | 'motion' | 'web' | 'training_audio' | 'vocal_match' | 'media_feed' | 'proprioception';
-  data: string;
-  intensity?: number;
-  rawNumeric?: number;
-  isSelfGenerated?: boolean;
-  strokeData?: {x: number, y: number}[];
-  metadata?: any;
+  data: string;          
+  intensity?: number;    
+  rawNumeric?: number;   
+  isSelfGenerated?: boolean; 
+  strokeData?: {x: number, y: number}[]; 
+  metadata?: any;        
 }
 
 export interface DeviceInfo {
@@ -52,20 +52,20 @@ export interface DeviceInfo {
 }
 
 export interface CameraSettings {
-    exposureCompensation: number;
+    exposureCompensation: number; 
     iso: number;
-    torch: boolean;
+    torch: boolean; 
 }
 
 export interface VisualFocus {
-  x: number;
-  y: number;
-  zoom: number;
-  eyesClosed: boolean;
-  activeEyeIndex: number;
-  availableEyes: DeviceInfo[];
+  x: number; 
+  y: number; 
+  zoom: number; 
+  eyesClosed: boolean; 
+  activeEyeIndex: number; 
+  availableEyes: DeviceInfo[]; 
   currentEyeLabel: string;
-  cameraSettings: CameraSettings;
+  cameraSettings: CameraSettings; 
 }
 
 export interface NeuroPlasticity {
@@ -75,10 +75,10 @@ export interface NeuroPlasticity {
 }
 
 export interface VocalParams {
-  airflow: number;
-  tension: number;
-  jawOpenness: number;
-  tonguePosition: number;
+  airflow: number;      
+  tension: number;      
+  jawOpenness: number;  
+  tonguePosition: number; 
 }
 
 export interface DrawingAction {
@@ -86,13 +86,13 @@ export interface DrawingAction {
     y: number;
     pressure: number;
     color: string;
-    isLifting: boolean;
+    isLifting: boolean; 
 }
 
 export interface OutputCapabilities {
-    canWrite: boolean;
-    canDraw: boolean;
-    canBrowse: boolean;
+    canWrite: boolean; 
+    canDraw: boolean;  
+    canBrowse: boolean; 
 }
 
 export interface TypewriterPage {
@@ -102,14 +102,14 @@ export interface TypewriterPage {
 }
 
 export enum ComputeMode {
-    LOCAL_BROWSER = 'LOCAL',
-    WASM_ACCELERATED = 'WASM',
-    DISTRIBUTED_CLUSTER = 'CLUSTER'
+    LOCAL_BROWSER = 'LOCAL', 
+    WASM_ACCELERATED = 'WASM', 
+    DISTRIBUTED_CLUSTER = 'CLUSTER' 
 }
 
 export interface ClusterNodeInfo {
     nodeId: string;
-    region: string;
+    region: string; 
     status: 'ACTIVE' | 'SLEEP' | 'OFFLINE';
     latencyMs: number;
     neuronCount: number;
@@ -117,39 +117,39 @@ export interface ClusterNodeInfo {
 
 export interface ProceduralConfig {
     seed: number;
-    densityMap: Record<number, number>;
-    lodThreshold: number;
+    densityMap: Record<number, number>; 
+    lodThreshold: number; 
 }
 
 export interface BrainState {
   stage: LifeStage;
   ascensionLevel: number;
   neurotransmitters: Neurotransmitters;
-  energy: number;
-  maxEnergy: number;
-  metabolicRate: number;
-  genesisTimestamp: number;
-  memories: Memory[];
-  shortTermBuffer: SensoryBufferItem[];
-  phonemeMemory: Record<string, VocalParams>;
-  neuronCount: number;
+  energy: number;        
+  maxEnergy: number;     
+  metabolicRate: number; 
+  genesisTimestamp: number; 
+  memories: Memory[];    
+  shortTermBuffer: SensoryBufferItem[]; 
+  phonemeMemory: Record<string, VocalParams>; 
+  neuronCount: number;   
   synapseStrength: number;
-  ageTicks: number;
-  lastThought: string;
-  isSleeping: boolean;
-  vocabulary: string[];
+  ageTicks: number;      
+  lastThought: string;   
+  isSleeping: boolean;   
+  vocabulary: string[];  
   learnedReflexes: Record<string, number>;
-  curiosityLevel: number;
-  mirrorNeuronActivity: number;
-  visualFocus: VisualFocus;
-  handPosition: { x: number, y: number };
-  handVelocity: { vx: number, vy: number };
-  targetStroke: { x: number, y: number }[];
+  curiosityLevel: number; 
+  mirrorNeuronActivity: number; 
+  visualFocus: VisualFocus; 
+  handPosition: { x: number, y: number }; 
+  handVelocity: { vx: number, vy: number }; 
+  targetStroke: { x: number, y: number }[]; 
   neuroPlasticity: NeuroPlasticity;
   outputCapabilities: OutputCapabilities;
   typewriterBuffer: string;
   typewriterHistory: TypewriterPage[];
-  detectedPeripherals: string[];
+  detectedPeripherals: string[]; 
   computeMode: ComputeMode;
   clusterConfig?: {
       connectedNodes: ClusterNodeInfo[];
@@ -164,11 +164,20 @@ export interface SimulationLog {
   message: string;
   source: 'SYSTEM' | 'CORTEX' | 'OCULAR' | 'USER' | 'EAR' | 'BODY' | 'SELF' | 'WEB' | 'MEDIA_STATION' | 'EXNER' | 'ARCHITECT';
   attachment?: string;
-  details?: any;
+  details?: any; 
 }
 
 export interface RealtimeSensoryData {
-  vision: { intensity: number; };
-  audio: { volume: number; frequencies: Uint8Array; };
-  motor: { x: number; y: number; isDrawing: boolean; };
+  vision: {
+    intensity: number;
+  };
+  audio: {
+    volume: number;
+    frequencies: Uint8Array;
+  };
+  motor: {
+    x: number;
+    y: number;
+    isDrawing: boolean;
+  };
 }
