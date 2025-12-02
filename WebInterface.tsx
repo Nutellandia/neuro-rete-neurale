@@ -1,1 +1,0 @@
-import React from 'react'; export default function WebInterface() { return <div className="p-2 border border-red-500">WebInterface Component Loaded</div>; }
