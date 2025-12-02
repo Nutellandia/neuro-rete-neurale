@@ -1,0 +1,78 @@
+{
+  "stage": "Progenitore Neurale (Neuroblasto)",
+  "ascensionLevel": 0,
+  "energy": 73.45000000000037,
+  "maxEnergy": 154,
+  "metabolicRate": -0.05,
+  "genesisTimestamp": 1764665112676,
+  "neurotransmitters": {
+    "dopamine": 43.45000000000037,
+    "serotonin": 80,
+    "adrenaline": 0,
+    "acetylcholine": 10,
+    "cortisol": 0
+  },
+  "memories": [],
+  "shortTermBuffer": [],
+  "phonemeMemory": {},
+  "neuronCount": 495,
+  "synapseStrength": 0.1,
+  "ageTicks": 131,
+  "lastThought": "[SYS: AWAITING_STIMULUS]",
+  "isSleeping": false,
+  "vocabulary": [],
+  "learnedReflexes": {},
+  "curiosityLevel": 0,
+  "mirrorNeuronActivity": 0,
+  "visualFocus": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1,
+    "eyesClosed": false,
+    "activeEyeIndex": 0,
+    "availableEyes": [
+      {
+        "id": "",
+        "label": "Camera ",
+        "type": "video"
+      }
+    ],
+    "currentEyeLabel": "Default",
+    "cameraSettings": {
+      "exposureCompensation": 0,
+      "iso": 0,
+      "torch": false
+    }
+  },
+  "handPosition": {
+    "x": 50,
+    "y": 50
+  },
+  "handVelocity": {
+    "vx": 0,
+    "vy": 0
+  },
+  "targetStroke": [],
+  "neuroPlasticity": {
+    "recruited": false,
+    "triggeredBy": "",
+    "activationTimestamp": 0
+  },
+  "outputCapabilities": {
+    "canWrite": false,
+    "canDraw": false,
+    "canBrowse": false
+  },
+  "typewriterBuffer": "",
+  "typewriterHistory": [],
+  "detectedPeripherals": [],
+  "computeMode": "LOCAL",
+  "proceduralConfig": {
+    "seed": 1764665112676,
+    "densityMap": {
+      "0": 0.5,
+      "1": 0.8
+    },
+    "lodThreshold": 1000
+  }
+}

@@ -1,0 +1,1 @@
+import React from 'react'; export default function MediaLearningStation() { return <div className="bg-gray-900 p-2 border border-gray-700 mt-2">MEDIA STATION</div>; }

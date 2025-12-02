@@ -1,0 +1,1 @@
+import React from 'react'; export default function CreativeCanvas() { return <div className="bg-gray-900 h-32 border border-gray-700 mt-2">CANVAS</div>; }

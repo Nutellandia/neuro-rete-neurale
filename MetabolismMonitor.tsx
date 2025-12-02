@@ -1,0 +1,1 @@
+import React from 'react'; export default function MetabolismMonitor({energy}: any) { return <div className="bg-gray-900 p-2 border border-gray-700 mb-2">ENERGY: {energy}</div>; }
