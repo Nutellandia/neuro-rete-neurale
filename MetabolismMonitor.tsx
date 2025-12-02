@@ -1,1 +1,0 @@
-import React from 'react'; export default function MetabolismMonitor() { return <div className="p-2 border border-red-500">MetabolismMonitor Component Loaded</div>; }
