@@ -1,1 +1,0 @@
-import React from 'react'; export default function NeuronVisualizer() { return <div className="p-2 border border-red-500">NeuronVisualizer Component Loaded</div>; }
