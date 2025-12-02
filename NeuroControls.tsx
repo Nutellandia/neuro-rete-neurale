@@ -1,0 +1,1 @@
+import React from 'react'; export default function NeuroControls({values}: any) { return <div className="p-2 text-[10px] text-white font-mono border border-gray-700 rounded bg-gray-900/50">CONTROLS: {JSON.stringify(values)}</div>; }

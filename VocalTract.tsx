@@ -1,0 +1,1 @@
+import React from 'react'; export default function VocalTract() { return <div className="hidden">Vocal</div>; }

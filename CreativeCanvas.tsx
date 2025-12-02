@@ -1,0 +1,1 @@
+import React from 'react'; export default function CreativeCanvas() { return <div className="hidden">Canvas</div>; }

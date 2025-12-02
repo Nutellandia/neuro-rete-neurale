@@ -1,0 +1,1 @@
+import React from 'react'; export default function MetabolismMonitor({energy}:any) { return <div className="p-2 text-white text-xs">ENERGY: {energy.toFixed(0)}</div>; }

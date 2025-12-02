@@ -1,0 +1,1 @@
+import { VocalParams, LifeStage } from "@/types"; export const biologicalVoice = { setMute: () => {}, updateParams: () => {}, startContinuous: () => {}, stopContinuous: () => {}, getOutputFrequencyData: () => new Uint8Array(0), speak: async () => {} };
