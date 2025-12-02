@@ -1,1 +1,0 @@
-export const exportProjectToZip = async () => alert('Exporting from an exported build is disabled.');
