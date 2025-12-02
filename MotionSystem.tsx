@@ -1,1 +1,0 @@
-import React from 'react'; export default function MotionSystem() { return <div className="p-2 border border-red-500">MotionSystem Component Loaded</div>; }
