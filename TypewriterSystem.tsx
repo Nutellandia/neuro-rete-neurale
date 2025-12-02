@@ -1,0 +1,1 @@
+import React from 'react'; export default function TypewriterSystem() { return <div className="bg-gray-900 p-2 border border-gray-700 mt-2">TYPEWRITER</div>; }
