@@ -1,1 +1,1 @@
-import React from 'react'; export default function OcularSystem({isActive, focus}: any) { return <div className="p-2 text-[10px] text-white border border-gray-700 rounded bg-gray-900/50">OCULAR: {isActive ? 'ACTIVE' : 'OFF'} ZOOM:{focus.zoom.toFixed(1)}</div>; }
+import React from 'react'; export default function OcularSystem() { return <div className="p-2 border border-red-500">OcularSystem Component Loaded</div>; }

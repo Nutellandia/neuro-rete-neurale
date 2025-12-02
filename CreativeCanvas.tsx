@@ -1,1 +1,1 @@
-import React from 'react'; export default function CreativeCanvas() { return <div className="hidden">Canvas</div>; }
+import React from 'react'; export default function CreativeCanvas() { return <div className="p-2 border border-red-500">CreativeCanvas Component Loaded</div>; }

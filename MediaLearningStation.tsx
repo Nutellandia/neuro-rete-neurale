@@ -1,1 +1,1 @@
-import React from 'react'; export default function MediaLearningStation() { return <div className="hidden">Media</div>; }
+import React from 'react'; export default function MediaLearningStation() { return <div className="p-2 border border-red-500">MediaLearningStation Component Loaded</div>; }

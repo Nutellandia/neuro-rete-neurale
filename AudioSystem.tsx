@@ -1,1 +1,1 @@
-import React from 'react'; export default function AudioSystem() { return <div className="hidden">Audio</div>; }
+import React from 'react'; export default function AudioSystem() { return <div className="p-2 border border-red-500">AudioSystem Component Loaded</div>; }

@@ -1,5 +1,5 @@
 import { CreateMLCEngine, MLCEngineInterface, AppConfig } from "@mlc-ai/web-llm";
-import { BrainState } from "@/types";
+import { BrainState } from './types';
 export interface LlmStatus { isLoaded: boolean; isLoading: boolean; progress: string; modelId: string; error: string | null; gpuAvailable: boolean; }
 const SELECTED_MODEL_ID = "Llama-3.2-1B-Instruct-q4f16_1-MLC";
 const localAppConfig: AppConfig = { useIndexedDBCache: true };
@@ -22,6 +22,7 @@ class LocalLlmNode {
             return reply.choices[0].message.content || "[...]";
         } catch (e) { return "[SYNAPTIC_MISFIRE]"; }
     }
+    public unload() { if(this.engine) { this.engine.unload(); this.status.isLoaded = false; } }
     public getStatus(): LlmStatus { return { ...this.status }; }
 }
 export const localLlmNode = new LocalLlmNode();

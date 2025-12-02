@@ -1,1 +1,1 @@
-import React from 'react'; export default function MetabolismMonitor({energy}:any) { return <div className="p-2 text-white text-xs">ENERGY: {energy.toFixed(0)}</div>; }
+import React from 'react'; export default function MetabolismMonitor() { return <div className="p-2 border border-red-500">MetabolismMonitor Component Loaded</div>; }

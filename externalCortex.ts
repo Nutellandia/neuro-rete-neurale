@@ -1,0 +1,3 @@
+import { BrainState, Neurotransmitters, SensoryInputData, Memory, VocalParams, DrawingAction, SensoryBufferItem, OutputCapabilities, CameraSettings, LifeStage } from './types';
+export const processExternalReaction = async (brainState: BrainState, input: SensoryInputData | null, context: string): Promise<any> => { await new Promise(resolve => setTimeout(resolve, 10)); return { thought: "", chemicalUpdate: {}, energyDelta: 0, mitosisFactor: 0, pruningFactor: 0 }; };
+export const analyzeGrowth = async (brainState: BrainState): Promise<{ readyToEvolve: boolean; reason: string }> => { return { readyToEvolve: false, reason: "WAIT_SIGNAL" }; };
